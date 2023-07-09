@@ -1,0 +1,17 @@
+# iNix Paste v0.1.0
+#
+# This is the messages configuration file.
+
+# Server messages
+server_starting: "Starting server..."
+server_running: "Server running on port "
+not_found: "404 Not Found"
+
+# Database messages
+db_fetch_err: "Error fetching data, try again later."
+db_save_err: "Error saving data, try again later."
+
+# Note messages
+note_saved: "Note saved."
+note_already_exist: "The note already exist with id "
+note_not_found: "Note with given id not found."

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(135deg);
+}
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.25em;
+    height: 0.25em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+}
+.loader:before {
+    animation: before 2s infinite;
+}
+.loader:after {
+    animation: after 2s infinite;
+}
+
+@keyframes before {
+    0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em ghostwhite,
+        -1em 0.5em ghostwhite;
+    }
+    35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em ghostwhite,
+        0 0.5em ghostwhite;
+    }
+    70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em ghostwhite,
+        1em 0.5em ghostwhite;
+    }
+    100% {
+        box-shadow: 1em -0.5em ghostwhite,
+        -1em 0.5em ghostwhite;
+    }
+}
